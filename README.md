@@ -5,7 +5,8 @@ This demonstrates .NET Core API with Angular 6 with Simple UI interaction
 ## Built With
 
 * ASP.NET Core Web API 
-* EF Core
+* EF Core (Code first)
+* SQLite Database
 * Angular
 * Boostrap
 
