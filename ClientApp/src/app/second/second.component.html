@@ -1,0 +1,19 @@
+<div class="row color-box-grid-header">
+
+  <div class="col-md-12">
+    <div class="card">
+      <h5 class="card-header">Color Selection Info</h5>
+      <div class="card-body">
+        <div class="alert alert-primary" role="alert">
+          Note: Please click on the box below to pick the color
+        </div>
+        <input class="color-picker-box" [(colorPicker)]="selectedColor" 
+          (colorPickerClose)="onEventLog('colorPickerClose', $event)" [style.background]="selectedColor" />
+      </div>
+      <div class="card-footer">
+        <h5>Current color code is {{selectedColor}}</h5>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="row color-box-grid-header">
+  <div class="col-md-1">
+    <button class="btn btn-primary" (click)="addBox()">Add</button>
+  </div>
+  <div class="col-md-3">
+    <button *ngIf="boxes.length > 0" class="btn btn-danger" (click)="deleteBox()">Delete</button>
+  </div>
+  <hr />
+</div>
+<div class="row color-box-grid">
+  <div class="col-sm-1 colorbox" [ngClass]="{'selected-box': box.isSelected}" *ngFor="let box of boxes" (click)="selectBox(box)"
+    [ngStyle]="{'background-color': box.color}">
+  </div>
+
+</div>
+
+<footer>
+  <div class="row">
+    <div class="col-md-8">
+      <span><b>There are {{boxes.length}} boxes</b></span>
+    </div>
+  </div>
+</footer>
